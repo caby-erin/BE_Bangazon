@@ -1,0 +1,50 @@
+[
+  {
+    "model": "bangazonapi.order",
+    "pk": 1,
+    "fields": {
+      "user": 1,
+      "name": "Tony",
+      "is_closed": false,
+      "customer_phone": "785-677-9876",
+      "customer_email": "tony@gmail.com",
+      "order_type": "over the phone"
+    }
+  },
+  {
+    "model": "bangazonapi.order",
+    "pk": 2,
+    "fields": {
+      "user": 2,
+      "name": "Delilah",
+      "is_closed": false,
+      "customer_phone": "878-322-0971",
+      "customer_email": "delilah@gmail.com",
+      "order_type": "in person"
+    }
+  },
+  {
+    "model": "bangazonapi.order",
+    "pk": 3,
+    "fields": {
+      "user": 3,
+      "name": "Wayne",
+      "is_closed": false,
+      "customer_phone": "872-323-6672",
+      "customer_email": "wayne@gmail.com",
+      "order_type": "in person"
+    }
+  },
+  {
+    "model": "bangazonapi.order",
+    "pk": 4,
+    "fields": {
+      "user": 2,
+      "name": "Daphne",
+      "is_closed": true,
+      "customer_phone": "908-171-3352",
+      "customer_email": "daphne@gmail.com",
+      "order_type": "over the phone"
+    }
+  }
+]

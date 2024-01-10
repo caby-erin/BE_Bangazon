@@ -1,0 +1,74 @@
+[
+  {
+    "model": "bangazonapi.item",
+    "pk": 1,
+    "fields": {
+      "name": "Cream Cheese Pizza",
+      "price": 10.99
+    }
+  },
+  {
+    "model": "bangazonapi.item",
+    "pk": 2,
+    "fields": {
+      "name": "Hot Wings",
+      "price": 7.99
+    }
+  },
+  {
+    "model": "bangazonapi.item",
+    "pk": 3,
+    "fields": {
+      "name": "French Fries",
+      "price": 2.99
+    }
+  },
+  {
+    "model": "bangazonapi.item",
+    "pk": 4,
+    "fields": {
+      "name": "French Fries with Cheese",
+      "price": 4.99
+    }
+  },
+  {
+    "model": "bangazonapi.item",
+    "pk": 5,
+    "fields": {
+      "name": "Mild Wings",
+      "price": 6.99
+    }
+  },
+  {
+    "model": "bangazonapi.item",
+    "pk": 6,
+    "fields": {
+      "name": "Triple Cheese Pizza",
+      "price": 9.99
+    }
+  },
+  {
+    "model": "bangazonapi.item",
+    "pk": 7,
+    "fields": {
+      "name": "Mild Wings",
+      "price": 6.99
+    }
+  },
+  {
+    "model": "bangazonapi.item",
+    "pk": 8,
+    "fields": {
+      "name": "Kinda Hot Wings",
+      "price": 8.99
+    }
+  },
+  {
+    "model": "bangazonapi.item",
+    "pk": 9,
+    "fields": {
+      "name": "Mozzie Stix",
+      "price": 3.99
+    }
+  }
+]

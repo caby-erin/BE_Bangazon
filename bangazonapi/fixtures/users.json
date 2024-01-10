@@ -1,0 +1,26 @@
+[
+  {
+    "model": "bangazonapi.user",
+    "pk": 1,
+    "fields": {
+      "uid": "z123",
+      "username": "Employee 1"
+    }
+  },
+  {
+    "model": "bangazonapi.user",
+    "pk": 2,
+    "fields": {
+      "uid": "z123456",
+      "username": "Employee 2"
+    }
+  },
+  {
+    "model": "bangazonapi.user",
+    "pk": 3,
+    "fields": {
+      "uid": "p09",
+      "username": "Employee 3"
+    }
+  }
+]
