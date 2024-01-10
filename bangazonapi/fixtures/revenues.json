@@ -1,0 +1,13 @@
+[
+  {
+    "model": "bangazonapi.revenue",
+    "pk": 1,
+    "fields": {
+      "order": 4,
+      "total_order_amount": 12.99,
+      "date": "2024-01-01",
+      "payment_type": "debit",
+      "tip_amount": 4.99
+    }
+  }
+]
