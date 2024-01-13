@@ -2,9 +2,30 @@ from django.http import HttpResponseServerError
 from rest_framework.viewsets import ViewSet
 from rest_framework.response import Response
 from rest_framework import serializers, status
-from bangazonapi.models import Order, User
+from bangazonapi.models import Order, User, Item, OrderItem
+from rest_framework.decorators import action
 
 class OrderView(ViewSet):
+  @action(methods=['post'], detail=True)
+  def add_item_to_order(self, request, pk):
+    '''post request for a user to add an item to an order'''
+    order = Order.objects.get(pk=pk)
+    item = Item.objects.get(pk=request.data['item'])
+    orderitem = OrderItem.objects.create(
+      item=item,
+      order=order
+    )
+    return Response(status=status.HTTP_201_CREATED)
+  
+  
+  @action(methods=['delete'], detail=True)
+  def remove_item_from_order(self, request, pk):
+    '''Delete request for a user to remove an item from an order'''
+    orderitem = request.data.get("order_item")
+    OrderItem.objects.filter(pk=orderitem, order__pk=pk).delete()
+    return Response(status=status.HTTP_204_NO_CONTENT)
+    
+    
   def retrieve(self, request, pk):
     order = Order.objects.get(pk=pk)
     serializer = OrderSerializer(order)
@@ -47,7 +68,16 @@ class OrderView(ViewSet):
     order.delete()
     return Response(None, status=status.HTTP_204_NO_CONTENT)
   
+class OrderItemSerializer(serializers.ModelSerializer):
+  price = serializers.ReadOnlyField(source='item.price')
+  name = serializers.ReadOnlyField(source='item.name')
+  class Meta:
+    model = OrderItem
+    fields = ('id', 'price', 'name')
+  
 class OrderSerializer(serializers.ModelSerializer):
+  items = OrderItemSerializer(many=True, read_only=True)
   class Meta:
     model = Order
-    fields = ('id', 'user', 'name', 'is_closed', 'customer_phone', 'customer_email', 'order_type')
+    fields = ('id', 'user', 'name', 'is_closed', 'customer_phone', 'customer_email', 'order_type', 'items')
+    depth = 1

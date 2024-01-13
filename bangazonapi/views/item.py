@@ -18,4 +18,4 @@ class ItemView(ViewSet):
 class ItemSerializer(serializers.ModelSerializer):
   class Meta:
     model = Item
-    fields = ('id', 'name', 'price', 'date', 'payment_type', 'tip_amount')
+    fields = ('id', 'name', 'price')
