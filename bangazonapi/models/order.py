@@ -8,3 +8,4 @@ class Order(models.Model):
   customer_phone = models.CharField(max_length=50)
   customer_email = models.CharField(max_length=50)
   order_type = models.CharField(max_length=50)
+  
